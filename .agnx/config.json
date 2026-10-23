@@ -1,0 +1,10 @@
+{
+  "appId": "deepseek-harness",
+  "installState": "installed",
+  "launchMode": "packaged",
+  "source": {
+    "kind": "github",
+    "url": "https://github.com/deepseek-ai/deepseek-harness"
+  },
+  "updatedAt": "2026-09-24T20:43:55.348Z"
+}

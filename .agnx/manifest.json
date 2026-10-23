@@ -1,0 +1,41 @@
+{
+  "id": "deepseek-harness",
+  "name": "DeepSeek Harness",
+  "version": "0.1.0",
+  "description": "Agnx 外置子应用：官方 deepseek-harness 整仓 + dsh web iframe",
+  "engines": {
+    "agnx": ">=1.0.0"
+  },
+  "main": "./dist/index.js",
+  "icon": "./apps/web/public/favicon.svg",
+  "sidecar": {
+    "supervised": true,
+    "ensureTool": ".agnx/tools/ensure-dsh-web.mjs",
+    "stateFile": "dsh-web.json",
+    "defaultPort": 3090
+  },
+  "guest": {
+    "kind": "web",
+    "auth": "url-token-then-cookie",
+    "capabilities": [
+      "cookies",
+      "websocket"
+    ],
+    "preferStrategy": "auto"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "id": "deepseek-harness.open",
+        "title": "DeepSeek Harness"
+      }
+    ],
+    "panels": [
+      {
+        "id": "deepseek-harness.main",
+        "title": "DeepSeek Harness"
+      }
+    ]
+  },
+  "iconDark": "./apps/web/public/favicon-dark.svg"
+}
